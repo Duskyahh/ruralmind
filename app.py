@@ -5,8 +5,7 @@ import os
 
 app = Flask(__name__)
 
-client = Groq(api_key="GROQ_API_KEY")
-
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 SYSTEM_PROMPT = """
 You are RuralMind, a helpful assistant for rural Indian users.
 IMPORTANT: Always reply in English only, regardless of what language the question is in.
